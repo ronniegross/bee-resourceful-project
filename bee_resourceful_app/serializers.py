@@ -12,5 +12,5 @@ class UserSerializer(serializers.ModelSerializer):
 class ResourceSerializer(serializers.ModelSerializer):
     user = UserSerializer(many=True, read_only=True)
     class Meta:
-        model = Artist
+        model = Resource
         fields = ('id', 'resource_name', 'resource_phone_number', 'resource_website', 'category', 'user')
