@@ -23,7 +23,7 @@ class Resource(models.Model):
     ("MH", "Mental Health"),
     )
 
-    month = models.CharField(max_length=21,
+    category = models.CharField(max_length=21,
         choices=CATEGORY_CHOICES,
         default="Pick a Category")
 
