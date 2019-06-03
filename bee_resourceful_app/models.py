@@ -12,7 +12,7 @@ class User(models.Model):
 
 class Resource(models.Model):
     resource_name = models.CharField(max_length=255)
-    resource_phone_number = models.IntegerField(max_length=10)
+    resource_phone_number = models.CharField(max_length=10)
     resource_website = models.CharField(max_length=60)
 
     CATEGORY_CHOICES = (
