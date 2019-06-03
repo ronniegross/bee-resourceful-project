@@ -8,7 +8,7 @@ class User(models.Model):
     birthday = models.DateField(auto_now=False, auto_now_add=False)
 
     def __str__(self):
-        return self.title
+        return self.email
 
 class Resource(models.Model):
     resource_name = models.CharField(max_length=255)
@@ -30,5 +30,5 @@ class Resource(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='resources')
 
     def __str__(self):
-        return self.name
+        return self.resource_name
 
