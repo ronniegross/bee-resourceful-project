@@ -16,10 +16,13 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib import admin
 from . import views
+from rest_framework_jwt.views import obtain_jwt_token
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.FrontendAppView.as_view()), #New URL for the index route
     path('api/v1/', include('bee_resourceful_app.urls')),
+    path('token-auth/', obtain_jwt_token),
+    path('bee_resourceful_app/', include('bee_resourceful_app.urls'))
 ]

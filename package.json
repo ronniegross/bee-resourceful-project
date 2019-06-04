@@ -1,7 +1,9 @@
 {
-    "name": "bee_resourceful_project",
-    "scripts": {
-      "build": "cd client && npm install && npm run build && cd ..",
-      "postinstall": "npm run build && echo 'Client built!'"
-    }
+  "name": "bee_resourceful_project",
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "postinstall": "npm run build && echo 'Client built!'"
+  },
+  "dependencies": {
   }
+}
